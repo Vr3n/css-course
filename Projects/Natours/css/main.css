@@ -105,7 +105,7 @@ body {
   margin-bottom: 8rem; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .u-margin-bottom-small {
   margin-bottom: 2rem; }
@@ -347,20 +347,20 @@ body {
   color: inherit;
   padding: 1.5rem 2rem;
   border-radius: 2px;
-  background-color: rbga(#fff, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
   width: 90%;
   display: block;
   transition: all .3s; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #55c57a; }
   .form__input:focus:invalid {
     border-bottom: 3px solid #ff7730; }
-  .form__input::-webkit-input-placeholder {
-    color: #999; }
 
 .form__label {
   font-size: 1.2rem;
@@ -389,14 +389,14 @@ body {
   padding-left: 4.5rem; }
 
 .form__radio-button {
+  position: absolute;
   height: 3rem;
   width: 3rem;
   border: 5px solid #55c57a;
   border-radius: 50%;
   display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -.4rem; }
+  top: -.4rem;
+  left: 0; }
   .form__radio-button::after {
     content: "";
     display: block;
@@ -409,7 +409,7 @@ body {
     transform: translate(-50%, -50%);
     background-color: #55c57a;
     opacity: 0;
-    transition: opacity .2s; }
+    transition: opacity .3s; }
 
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1; }
@@ -491,7 +491,8 @@ body {
   padding: 6rem;
   padding-left: 9rem;
   font-size: 1.6rem;
-  transform: skewX(-12deg); }
+  transform: skewX(-12deg);
+  backface-visibility: hidden; }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -501,11 +502,12 @@ body {
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
-    position: relative; }
-  .story__img {
+    position: relative;
+    backface-visibility: hidden; }
+  .story__image {
     height: 100%;
-    transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden;
+    transform: translateX(-4rem) scale(1.1);
     transition: all .5s; }
   .story__text {
     transform: skewX(12deg); }
@@ -524,9 +526,9 @@ body {
   .story:hover .story__caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
-  .story:hover .story__img {
+  .story:hover .story__image {
     transform: translateX(-4rem) scale(1);
-    filter: blur(3px) brightness(80%); }
+    filter: blur(2px); }
 
 .footer {
   background-color: #333;
@@ -746,3 +748,21 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
+
+.section-stories {
+  padding: 15rem 0;
+  position: relative; }
+
+.section-booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.booking {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 1 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  height: 50rem; }
+  .booking__form {
+    width: 50%;
+    padding: 6rem; }
