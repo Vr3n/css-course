@@ -534,7 +534,7 @@ body {
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem;
-  color: #f7f7f7; }
+  background-color: #333; }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
@@ -552,8 +552,8 @@ body {
     .footer__item:not(:last-child) {
       margin-right: 1.5rem; }
   .footer__link:link, .footer__link:visited {
-    color: #f7f7f7;
     background-color: #333;
+    color: #f7f7f7;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
